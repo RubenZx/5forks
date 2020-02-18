@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react-native",
+    "lib": ["dom", "esnext"],
+    "moduleResolution": "node",
+    "noEmit": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "baseUrl": "./",
+    "paths": {
+      "@Screens/*": ["src/screens/*"],
+      "@Components/*": ["src/components/*"],
+      "@Navigation": ["src/navigation"],
+      "@Navigation/*": ["src/navigation/*"],
+      "@Utils/*": ["src/utils/*"],
+      "@Assets/*": ["assets/*"],
+      "@Env": ["src/utils/enviroment"],
+      "react-native-easy-toast": ["src/types/easy-toast"]
+    },
+    "typeRoots": ["src/types", "node_modules/@types"]
+  }
+}
