@@ -7,12 +7,12 @@ import { ThemeProvider } from 'styled-components/native'
 
 export default function App() {
   return (
-    <ThemeProvider theme={styledTheme}>
-      <PaperProvider theme={paperTheme}>
-        <FirebaseProvider>
+    <FirebaseProvider>
+      <ThemeProvider theme={styledTheme}>
+        <PaperProvider theme={paperTheme}>
           <Navigation />
-        </FirebaseProvider>
-      </PaperProvider>
-    </ThemeProvider>
+        </PaperProvider>
+      </ThemeProvider>
+    </FirebaseProvider>
   )
 }

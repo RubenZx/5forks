@@ -16,6 +16,9 @@ export const Firebase = {
     const token = await getGitHubToken()
     const credential = firebase.auth.GithubAuthProvider.credential(token)
     return firebase.auth().signInWithCredential(credential)
+  },
+  emailAuthProvider(email: string, password: string) {
+    return firebase.auth.EmailAuthProvider.credential(email, password)
   }
 }
 

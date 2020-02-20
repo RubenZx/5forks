@@ -16,8 +16,6 @@ import { Button, Divider as PapeDivider } from 'react-native-paper'
 import styled from 'styled-components/native'
 import * as yup from 'yup'
 
-const Text = styled.Text``
-
 const GitHub = styled(Button)`
   background-color: black;
 `

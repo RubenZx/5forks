@@ -9,7 +9,8 @@ const spacing = {
   marginTop: '20px' as '20px',
   marginBottom: '20px' as '20px',
   marginLeft: '40px' as '40px',
-  marginRight: '40px' as '40px'
+  marginRight: '40px' as '40px',
+  padding: '20px' as '20px'
 }
 
 export const paperTheme: Theme = {

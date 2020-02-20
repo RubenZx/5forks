@@ -3,7 +3,7 @@
     "name": "Blank Template (TypeScript)",
     "slug": "5forks",
     "privacy": "public",
-    "schema": "5forks",
+    "scheme": "five-forks",
     "sdkVersion": "36.0.0",
     "platforms": ["ios", "android", "web"],
     "version": "1.0.0",
