@@ -13,6 +13,7 @@ export type AccountStackNavigationProp = StackNavigationProp<
 
 export type RestaurantStackParamList = {
   Restaurants: undefined
+  AddRestaurant: undefined
 }
 
 export type RestaurantStackNavigationProp = StackNavigationProp<
