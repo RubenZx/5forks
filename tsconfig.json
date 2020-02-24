@@ -15,6 +15,7 @@
       "@Navigation/*": ["src/navigation/*"],
       "@Utils/*": ["src/utils/*"],
       "@Assets/*": ["assets/*"],
+      "@Hooks/*": ["src/hooks/*"],
       "@Env": ["src/utils/enviroment"],
       "react-native-easy-toast": ["src/types/easy-toast"]
     },

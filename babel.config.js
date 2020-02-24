@@ -13,7 +13,8 @@ module.exports = function(api) {
             '@Navigation': './src/navigation',
             '@Utils': './src/utils',
             '@Assets': './assets',
-            '@Env': './src/utils/enviroment'
+            '@Env': './src/utils/enviroment',
+            '@Hooks': './src/hooks'
           }
         }
       ]

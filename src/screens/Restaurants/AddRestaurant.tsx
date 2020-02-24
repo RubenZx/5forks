@@ -1,14 +1,12 @@
 import Loading from '@Components/Loading'
-import SubmitButton from '@Components/SubmitButton'
-import { MaterialCommunityIcons } from '@expo/vector-icons'
 import { RestaurantStackNavigationProp } from '@Navigation/tabs/tabs'
 import { useNavigation } from '@react-navigation/native'
-import { Formik } from 'formik'
 import React, { useRef, useState } from 'react'
-import { ScrollView, View } from 'react-native'
+import { ScrollView } from 'react-native'
 import Toast from 'react-native-easy-toast'
 import { Surface } from 'react-native-paper'
 import styled from 'styled-components/native'
+import AddRestaurantForm from './AddRestaurantForm'
 
 const ViewImage = styled.View`
   flex-direction: row;
@@ -25,20 +23,20 @@ const Miniature = styled(Surface)`
   justify-content: center;
 `
 
-const UploadImage = ({ imagesSelected, setImagesSelected }) => {
-  return (
-    <ViewImage>
-      <MaterialCommunityIcons
-        name="camera"
-        color="#7a7a7a"
-        onPress={() => {
-          console.log('Image added')
-        }}
-        size={30}
-      />
-    </ViewImage>
-  )
-}
+// const UploadImage = ({ imagesSelected, setImagesSelected }) => {
+//   return (
+//     <ViewImage>
+//       <MaterialCommunityIcons
+//         name="camera"
+//         color="#7a7a7a"
+//         onPress={() => {
+//           console.log('Image added')
+//         }}
+//         size={30}
+//       />
+//     </ViewImage>
+//   )
+// }
 
 export default () => {
   const { navigate } = useNavigation<RestaurantStackNavigationProp>()
@@ -48,21 +46,7 @@ export default () => {
 
   return (
     <ScrollView>
-      <UploadImage
-        imagesSelected={imagesSelected}
-        setImagesSelected={setImagesSelected}
-      />
-      <Formik
-        initialValues={{}}
-        onSubmit={() => {
-          console.log('Adding restaurants')
-        }}>
-        {({ handleSubmit }) => (
-          <View>
-            <SubmitButton onPress={handleSubmit}>Add</SubmitButton>
-          </View>
-        )}
-      </Formik>
+      <AddRestaurantForm setLoading={() => setIsLoading(true)} />
       <Toast ref={toastRef} position="center" opacity={0.5} />
       <Loading isVisible={isLoading} />
     </ScrollView>
