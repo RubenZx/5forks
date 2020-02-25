@@ -1,4 +1,5 @@
 import * as ImagePicker from 'expo-image-picker'
+import * as R from 'ramda'
 import { useState } from 'react'
 
 type ImagePickerArgs = {
@@ -19,7 +20,12 @@ const useImagePicker = ({ onCancel, options }: ImagePickerArgs) => {
     }
     setImages(prev => [...prev, result])
   }
-  return { openLibrary, images }
+
+  const removeImage = (uri: string) => {
+    setImages(R.reject(image => image.uri === uri))
+  }
+
+  return { openLibrary, images, removeImage }
 }
 
 export default useImagePicker
